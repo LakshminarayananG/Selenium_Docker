@@ -119,5 +119,20 @@ Checking Container Logs:
 	- docker logs <container_Name>
 	
 	
++Docker Compose:
+  ->Instead of passing multiple variables within a single docker command which is difficult,docker compose
+	can be used to pass multiple commands in a single file.
+  -> The file is a yml one
+  -> docker-compose to install the docker compose in CLI
+  
++To Run the docker compose file
+  -> docker-compose up
+     The above command will execute the yml file with the given specifications.
+	 
+	 
++Multiple docker containers with multiple options
+  
+	
+	
 
 

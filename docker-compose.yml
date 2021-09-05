@@ -1,0 +1,20 @@
+version: "3"
+services:
+  nginx: 
+    image: nginx
+    container_name: nginxcontainer
+  alpine:
+    image: alpine
+    container_name: alpinecontainer
+    entrypoint: "ping nginx"
+    depends_on:
+      - nginx
+  alpine1:
+    image: alpine
+    container_name: alpine1container
+    entrypoint: "wget nginx"
+    working_dir: /a/b/c
+    volumes: 
+      - C:\Users\admin:/a/b/c
+    depends_on:
+      - nginx
