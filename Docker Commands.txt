@@ -3,22 +3,22 @@ Docker Commands:
 +--------------------------+---------------------------------------------------------------------------+
 |    Command 	           |               Description                                                 |
 +--------------------------+---------------------------------------------------------------------------+
-| docker pull <image>      | pulls an image from docker hub											   |
+| docker pull <image>      | pulls an image from docker hub	     				       |
 +--------------------------+---------------------------------------------------------------------------+
-| docker images		       | shows all images available in our machine								   |
+| docker images		   | shows all images available in our machine			               |
 +--------------------------+---------------------------------------------------------------------------+
-| docker ps			       | shows all running containers											   |
+| docker ps		   | shows all running containers	   				       |
 +--------------------------+---------------------------------------------------------------------------+
-| docker ps	-a		       | shows all containers including the stopped ones						   |
+| docker ps	-a	   | shows all containers including the stopped ones	  		       |
 +--------------------------+---------------------------------------------------------------------------+
-| docker run <image>       | creates a container from the image										   |
+| docker run <image>       | creates a container from the image	  				       |
 +--------------------------+---------------------------------------------------------------------------+
-|docker stop <container id>| stops a running container												   |
+|docker stop <container id>| stops a running container						       |
 +--------------------------+---------------------------------------------------------------------------+
 | docker system prune -f   | To remove all stopped containers (will not remove the running containers) |
 +--------------------------+---------------------------------------------------------------------------+
 | docker system prune -a   | To remove all stopped containers (will not remove the running containers).
-|						   | and the unused image as well.			                                   |
+|						   | and the unused image as well.		       |
 +--------------------------+---------------------------------------------------------------------------+
 
 List of other docker commands can be found below link
@@ -40,19 +40,19 @@ By default we would be saving it as Dockerfile. All the commands are with CAPS.
 +---------------------+---------------------------------------------------------------------------+
 | FROM Image	      |The image that needs to be used as base image. First line of docker file.  |
 +---------------------+---------------------------------------------------------------------------+
-| ADD host-files      |Adds files from the host into the image							          |
+| ADD host-files      |Adds files from the host into the image				          |
 +---------------------+---------------------------------------------------------------------------+
 | RUN command         |Runs any given command - useful to install any software, create directories|
 +---------------------+---------------------------------------------------------------------------+
-| ENV envVar envValue |Sets an environment variable in the image   						          |
+| ENV envVar envValue |Sets an environment variable in the image   			          |
 +---------------------+---------------------------------------------------------------------------+
 | WORKDIR dir         |Sets a default working directory.[If we ignore / is the working directory] |
 +---------------------+---------------------------------------------------------------------------+
-| EXPOSE 	          |Exposes port of the application                                            |
+| EXPOSE 	      |Exposes port of the application                                            |
 +---------------------+---------------------------------------------------------------------------+
 | ENTRYPOINT command  |Command to be executed once a container is created from the image          |
 +---------------------+---------------------------------------------------------------------------+
-|#		 	          |To comment any given line                                                  |
+|#	              |To comment any given line                                                  |
 +---------------------+---------------------------------------------------------------------------+
 
 
@@ -70,25 +70,25 @@ Docker Commands:
 +---------------------+---------------------------------------------------------------------------+
 |      Command 	      |                    Description                                            |
 +---------------------+---------------------------------------------------------------------------+
-|   build 	      	  | To build a docker image 	                                              |
+|   build 	      | To build a docker image 	                                          |
 +---------------------+---------------------------------------------------------------------------+
-|   push 	     	  | To pull a specific image from docker repo/docker hub 					  |                                           
+|   push 	      | To pull a specific image from docker repo/docker hub 			  |                                           
 +---------------------+---------------------------------------------------------------------------+
-|   pull 	     	  |To push the image to docker hub                                            |
+|   pull 	      |To push the image to docker hub                                            |
 +---------------------+---------------------------------------------------------------------------+
-|   run 	     	  |To create a container, will pull the image if its not available locally 	  |                                           
+|   run 	      |To create a container, will pull the image if its not available locally 	  |                                           
 +---------------------+---------------------------------------------------------------------------+
-|   start /stop 	  |To start/stop the a running container									  |
+|   start /stop       |To start/stop the a running container					  |
 +---------------------+---------------------------------------------------------------------------+
-|   network create	  | To create a network														  |
+|   network create    | To create a network							  |
 +---------------------+---------------------------------------------------------------------------+
-|   logs			  |To retrieve logs from an exited container								  |
+|   logs              |To retrieve logs from an exited container  				  |
 +---------------------+---------------------------------------------------------------------------+
-|   system prune -a/f |To get rid of unused volume / images										  |
+|   system prune -a/f |To get rid of unused volume / images					  |
 +---------------------+---------------------------------------------------------------------------+
-|   ps -a	 	      |To list all the containers											      |
+|   ps -a	      |To list all the containers		         			  |
 +---------------------+---------------------------------------------------------------------------+
-|   tag	 	     	  |To specify the tag for a container										  |
+|   tag	 	      |To specify the tag for a container					  |
 +---------------------+---------------------------------------------------------------------------+
 
 
@@ -96,19 +96,19 @@ Docker Command Run Options:
 +---------------------+---------------------------------------------------------------------------+
 |      Command 	      |                    Description                                            |
 +---------------------+---------------------------------------------------------------------------+
-|   -d 	      		  | To run a container in the background mode				                  |
+|   -d 	      	      | To run a container in the background mode		                  |
 +---------------------+---------------------------------------------------------------------------+
-|   -it 	    	  | To run the container in interactive mode. Entry point should be shell     |
+|   -it 	      | To run the container in interactive mode. Entry point should be shell     |
 +---------------------+---------------------------------------------------------------------------+
-|   -v 	     		  | For volume mapping to map host with container directory					  |                                           
+|   -v 	     	      | For volume mapping to map host with container directory			  |                                           
 +---------------------+---------------------------------------------------------------------------+
-|   -p 	     		  | Port mapping. To expose an application through a host port		          |
+|   -p 	     	      | Port mapping. To expose an application through a host port	          |
 +---------------------+---------------------------------------------------------------------------+
-|   -e 	     		  | To pass parameter / env variables to the container						  |                                           
+|   -e 	     	      | To pass parameter / env variables to the container			  |                                           
 +---------------------+---------------------------------------------------------------------------+
-|   --name			  | To set the meaningful name to the container								  |
+|   --name	      | To set the meaningful name to the container				  |
 +---------------------+---------------------------------------------------------------------------+
-|   --entrypoint	  | To override the entrypoint in an image									  |
+|   --entrypoint      | To override the entrypoint in an image					  |
 +---------------------+---------------------------------------------------------------------------+
 
 
