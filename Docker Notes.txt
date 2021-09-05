@@ -46,17 +46,17 @@ tag = Latest by default
 
 
 +--------------------------+---------------------------------------------------------------------------+
-|Option 	               |Description                                                                |
+|Option 	           |Description                                                                |
 +--------------------------+---------------------------------------------------------------------------+
-|  -d	 	               |To run the container in the background                                     |
+|  -d	 	           |To run the container in the background                                     |
 +--------------------------+---------------------------------------------------------------------------+
-|  -i	 	               |To attach the standard input to the container							   |
+|  -i	 	           |To attach the standard input to the container      			       |
 +--------------------------+---------------------------------------------------------------------------+
-|  -t	 	               |To attach the standard output to the container						       |
+|  -t	 	           |To attach the standard output to the container			       |
 +--------------------------+---------------------------------------------------------------------------+
-|  --name somename         |To assign the given name to the container							       |
+|  --name somename         |To assign the given name to the container				       |
 +--------------------------+---------------------------------------------------------------------------+
-|  --entrypoint            |Entrypoint is the command to be executed once a container is created	   |
+|  --entrypoint            |Entrypoint is the command to be executed once a container is created       |
 +--------------------------+---------------------------------------------------------------------------+
 
 + When doing docker ps -a, it would not show the full container id but only few characters of the id
