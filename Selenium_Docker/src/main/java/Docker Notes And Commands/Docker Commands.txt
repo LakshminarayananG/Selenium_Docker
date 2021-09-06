@@ -112,3 +112,10 @@ Docker Command Run Options:
 +---------------------+---------------------------------------------------------------------------+
 
 
+
+Using the docker-compose yml and running the selenium tests, when we want to scale up, can use the below command
+
+docker-compose up -d --scale chrome=5 --scale firefox=5
+
+The above command will create 5 instances of chrome & 5 instances of firefox in the selenium grid
+

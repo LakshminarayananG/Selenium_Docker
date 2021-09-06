@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test2(failed)">
-    <parameter name="expectedPrice" value="$1169 USD"/>
-    <parameter name="noOfPassengers" value="3"/>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="keyword" value="java"/>
     <classes>
-      <class name="com.app.tests.BookFlight">
+      <class name="com.app.search.tests.SearchTest">
         <methods>
-          <include name="registrationPageTest"/>
-          <include name="flightDetailsPage"/>
-          <include name="registrationConfirmationPage"/>
-          <include name="setupDriver"/>
           <include name="tearDown"/>
-          <include name="confirmationPage"/>
-          <include name="findFlightsPage"/>
+          <include name="searchPage"/>
+          <include name="setupDriver"/>
         </methods>
-      </class> <!-- com.app.tests.BookFlight -->
+      </class> <!-- com.app.search.tests.SearchTest -->
     </classes>
-  </test> <!-- Test2(failed) -->
+  </test> <!-- Test(failed) -->
+  <test thread-count="5" name="TestSearch(failed)">
+    <parameter name="keyword" value="selenium"/>
+    <classes>
+      <class name="com.app.search.tests.SearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="searchPage"/>
+          <include name="setupDriver"/>
+        </methods>
+      </class> <!-- com.app.search.tests.SearchTest -->
+    </classes>
+  </test> <!-- TestSearch(failed) -->
 </suite> <!-- Failed suite [Suite] -->

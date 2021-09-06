@@ -8,39 +8,30 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FlightDetailsPage {
-	
+
 	private WebDriver driver;
 	private WebDriverWait wait;
-	
-	@FindBy(id="reserveFlights")
+
+	@FindBy(id = "reserveFlights")
 	private WebElement flightContinue;
-	
-	@FindBy(id="buyFlights")
+
+	@FindBy(id = "buyFlights")
 	private WebElement buyFlight;
-	
-	public FlightDetailsPage(WebDriver driver) {		
+
+	public FlightDetailsPage(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, 30);
 		PageFactory.initElements(driver, this);
 	}
-	
-	
+
 	public void clickContinue() {
 		this.wait.until(ExpectedConditions.elementToBeClickable(flightContinue));
 		this.flightContinue.click();
 	}
-	
+
 	public void navigateToConfirmationPage() {
 		this.wait.until(ExpectedConditions.elementToBeClickable(buyFlight));
 		this.buyFlight.click();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
