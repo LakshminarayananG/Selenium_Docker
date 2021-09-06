@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.app.tests.BookFlight">
+      <class name="com.app.search.tests.SearchTest">
         <methods>
-          <include name="registrationPageTest"/>
-          <include name="flightDetailsPage"/>
-          <include name="registrationConfirmationPage"/>
+          <include name="searchPage"/>
           <include name="setupDriver"/>
           <include name="tearDown"/>
-          <include name="confirmationPage"/>
-          <include name="findFlightsPage"/>
         </methods>
-      </class> <!-- com.app.tests.BookFlight -->
+      </class> <!-- com.app.search.tests.SearchTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,4 +1,4 @@
-package com.app.pages;
+package com.app.booking.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,24 +1,30 @@
-package com.app.tests;
+package com.app.booking.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.app.pages.FlightDetailsPage;
-import com.app.pages.FlightsPage;
-import com.app.pages.OrderConfirmationPage;
-import com.app.pages.RegistrationConfirmationPage;
-import com.app.pages.RegistrationPage;
+import com.app.booking.pages.FlightDetailsPage;
+import com.app.booking.pages.FlightsPage;
+import com.app.booking.pages.OrderConfirmationPage;
+import com.app.booking.pages.RegistrationConfirmationPage;
+import com.app.booking.pages.RegistrationPage;
 
 public class BookFlight {
 	
 	private WebDriver driver;
-	
+	private String noOfPassengers;
+	private String expectedPrice;
 	
 	@BeforeTest
-	public void setupDriver() {
+	@Parameters({"noOfPassengers","expectedPrice"})
+	public void setupDriver(String noOfPassengers,String expectedPrice) {
+		this.noOfPassengers=noOfPassengers;
+		this.expectedPrice=expectedPrice;
 		System.setProperty("webdriver.chrome.driver", "C://Users//admin//Downloads//chromedriver_win32//chromedriver.exe");				
 		this.driver= new ChromeDriver();
 	}
@@ -44,7 +50,7 @@ public class BookFlight {
 	@Test(dependsOnMethods = "registrationConfirmationPage")
 	public void flightDetailsPage() {
 		FlightsPage flightpage = new FlightsPage(driver);
-		flightpage.selectPassengers("2");
+		flightpage.selectPassengers(noOfPassengers);
 		flightpage.navigateToFlightsDetailsPage();
 	}
 	
@@ -58,7 +64,8 @@ public class BookFlight {
 	@Test(dependsOnMethods = "findFlightsPage")
 	public void confirmationPage() {
 		OrderConfirmationPage orderpage = new OrderConfirmationPage(driver);
-		orderpage.validateConfirmationPage();
+		String price=orderpage.validateConfirmationPage();
+		Assert.assertEquals(price, expectedPrice);
 		orderpage.clickSignOff();
 	}
 	
