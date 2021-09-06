@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-09-06T14:58:40 IST" name="Default suite" finished-at="2021-09-06T14:58:57 IST" duration-ms="17051">
+    <groups>
+    </groups>
+    <test started-at="2021-09-06T14:58:40 IST" name="Default test" finished-at="2021-09-06T14:58:57 IST" duration-ms="17051">
+      <class name="com.app.tests.BookFlight">
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.app.tests.BookFlight@2b48a640]" started-at="2021-09-06T14:58:40 IST" name="setupDriver" finished-at="2021-09-06T14:58:43 IST" duration-ms="3634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriver -->
+        <test-method signature="registrationPageTest()[pri:0, instance:com.app.tests.BookFlight@2b48a640]" started-at="2021-09-06T14:58:43 IST" name="registrationPageTest" finished-at="2021-09-06T14:58:53 IST" duration-ms="9576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationPageTest -->
+        <test-method signature="registrationConfirmationPage()[pri:0, instance:com.app.tests.BookFlight@2b48a640]" started-at="2021-09-06T14:58:53 IST" name="registrationConfirmationPage" finished-at="2021-09-06T14:58:53 IST" depends-on-methods="com.app.tests.BookFlight.registrationPageTest" duration-ms="264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationConfirmationPage -->
+        <test-method signature="flightDetailsPage()[pri:0, instance:com.app.tests.BookFlight@2b48a640]" started-at="2021-09-06T14:58:53 IST" name="flightDetailsPage" finished-at="2021-09-06T14:58:55 IST" depends-on-methods="com.app.tests.BookFlight.registrationConfirmationPage" duration-ms="1784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightDetailsPage -->
+        <test-method signature="findFlightsPage()[pri:0, instance:com.app.tests.BookFlight@2b48a640]" started-at="2021-09-06T14:58:55 IST" name="findFlightsPage" finished-at="2021-09-06T14:58:56 IST" depends-on-methods="com.app.tests.BookFlight.flightDetailsPage" duration-ms="505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findFlightsPage -->
+        <test-method signature="confirmationPage()[pri:0, instance:com.app.tests.BookFlight@2b48a640]" started-at="2021-09-06T14:58:56 IST" name="confirmationPage" finished-at="2021-09-06T14:58:56 IST" depends-on-methods="com.app.tests.BookFlight.findFlightsPage" duration-ms="337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confirmationPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.app.tests.BookFlight@2b48a640]" started-at="2021-09-06T14:58:56 IST" name="tearDown" finished-at="2021-09-06T14:58:57 IST" duration-ms="831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.app.tests.BookFlight -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,7 @@
+version: "3"
+services:
+  squares: 
+    image: vinsdocker/squares
+    container_name: squareFinder
+    environment:
+      - NUMBER=5

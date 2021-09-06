@@ -1,0 +1,138 @@
+Docker Terminologies:
+
+Docker File:
+* Similar to .java file that has the instructions for docker to read & perform actions
+* Does not having any extension
+* Named only as Dockerfile
+
+Build:
+* Creating an image / snapshot based on the commands given in the file
+* Similar to compile / packaging a java class
+
+Image:
+* Snapshot of the VM
+* Will have the instructions given in docker file
+
+
+Tag:
+* Version of the image, (java with version 8, 9)
+
+Container:
+* Light weight VM created from the image
+* Multiple VM's can be created from the same image
+
+Docker Hub:
+* Similar to maven repo, and has the docker image repository
+
+
++ To remove a docker image, use the below command
+	-> docker rmi <Image_Name>
+
+Docker Compose:
++ Provide instructions to docker in yaml file
+
+
+Docker Image naming format:
+
+ -> docker run hello-world
+   [repository-host:port]/[owner]/imagename[:tag]
+
+repository-host = hub.docker.com
+owner = Library (docker official)
+tag = Latest by default
+
+
++ Latest is just the tag similar to the version name. It gives the stable image
+
+
++--------------------------+---------------------------------------------------------------------------+
+|Option 	           |Description                                                                |
++--------------------------+---------------------------------------------------------------------------+
+|  -d	 	           |To run the container in the background                                     |
++--------------------------+---------------------------------------------------------------------------+
+|  -i	 	           |To attach the standard input to the container      			       |
++--------------------------+---------------------------------------------------------------------------+
+|  -t	 	           |To attach the standard output to the container			       |
++--------------------------+---------------------------------------------------------------------------+
+|  --name somename         |To assign the given name to the container				       |
++--------------------------+---------------------------------------------------------------------------+
+|  --entrypoint            |Entrypoint is the command to be executed once a container is created       |
++--------------------------+---------------------------------------------------------------------------+
+
++ When doing docker ps -a, it would not show the full container id but only few characters of the id
+
+
++ When docker run is given, it creates a new container for every command given
+
+
+Volume Mapping:
++ A feature with which we can share files between the host & the container
+	-> docker run -v/path/to/host/dir:path/to/container/dir image
+	-> docker run -v c:\user\admin:/a/b/c ubuntu
+The above command will map the files between the local admin directory and the /a/b/c in ubuntu image.
+Any changes made between any of the two directories can be accessed from the other directory
+
+
+
+Docker Network:
+A number of containers can be created and attached to a network so that one or more containers are
+accessible within the network.
+
+	-> docker network create <network name>
+The above command will create a network with the name given
+
+	-> docker run -d --name=nginx --network=practice nginx
+The above command will create the container with name nginx in practice network
+
+	-> docker run -it --name=alping --network=practice alpine
+The above command will run the alpine image in interactive mode in practice network
+
+	-> docker run -e <Image_Name> .
+The above is used to pass variable value to a docker file.
+
+
+Port Mapping:
+Host & container port can be mapped 
+
+	-> docker run -p 8085:80 nginx
+The above command will run the nginx server in 8085 port in local server though by default it is available
+at port 80 in the container
+
+
++ The docker image name is supposed to be in lowercase.
+
++ For an image that is already created using the dockerfile, we can override the entrypoint as below
+	-> docker run -it --entrypoint=/bin/sh <Image Name>
+
+
+Tagging an Image & Pushing it to dockerhub:
++ To login to the docker hub, give below in the command line
+	- docker login 
++ To push a specific image
+	- docker push <Image_Name>
++ Tagging an image to a specific version
+	- docker tag <Image_Name:version> <new_tag_name>
+	
+	
+Checking Container Logs:
++ A container's logs can be viewed even after it exits
+	- docker logs <container_Name>
+	
+	
++Docker Compose:
+  ->Instead of passing multiple variables within a single docker command which is difficult,docker compose
+	can be used to pass multiple commands in a single file.
+  -> The file is a yml one
+  -> docker-compose to install the docker compose in CLI
+  
++To Run the docker compose file
+  -> docker-compose up
+     The above command will execute the yml file with the given specifications.
+	 
+	 
++Multiple docker containers with multiple options
+  
+	
+	
+
+

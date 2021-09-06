@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+</qualifiedTypeNameHistroy>
